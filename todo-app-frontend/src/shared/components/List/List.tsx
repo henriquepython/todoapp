@@ -1,14 +1,18 @@
-import { Column, IListItem, ListItem } from '..';
+import { Column } from '..';
+import { ITodo } from '../../interfaces';
+import { ListItem } from './ListItem';
 
-interface IList {
-    items: IListItem[];
-}
-export const List = (props: IList) => {
-    const { items } = props;
-    return(
-        <Column py='10px'>
+type ListProps = {
+  items: ITodo[];
+  selectedIndex: number;
+  onClick: (index: number) => void;
+};
+
+export const List: React.FC<ListProps> = ({ items, selectedIndex, onClick }) => {
+    return (
+        <Column py="10px">
             {items.map((item, index) => (
-                <ListItem key={index} {...item} />
+                <ListItem key={index} {...item} isActive={index === selectedIndex} index={index} onClick={onClick} />
             ))}
         </Column>
     );

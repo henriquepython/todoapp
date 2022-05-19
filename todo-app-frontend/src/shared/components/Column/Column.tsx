@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { 
+import {
     border,
+    BorderProps,
     borderRadius,
     BorderRadiusProps,
-    BordersProps,
     color,
     ColorProps,
     flexbox,
@@ -11,18 +11,26 @@ import {
     layout,
     LayoutProps,
     space,
-    SpaceProps
+    SpaceProps,
 } from 'styled-system';
 
-type ColumnProps = LayoutProps & SpaceProps & ColorProps & BorderRadiusProps & BordersProps & FlexboxProps;
+type ColumnProps = LayoutProps &
+  SpaceProps &
+  ColorProps &
+  BorderRadiusProps &
+  BorderProps &
+  FlexboxProps & {
+    cursor?: string;
+  };
 
 export const Column = styled.div<ColumnProps>`
-    display: flex;
-    flex-direction: column;
-    ${flexbox}
-    ${layout}
-    ${space}
-    ${color}
-    ${borderRadius}
-    ${border}
+  display: flex;
+  flex-direction: column;
+  ${({ cursor }) => cursor && `cursor: ${cursor};`}
+  ${flexbox}
+  ${layout}
+  ${space}
+  ${color}
+  ${borderRadius}
+  ${border}
 `;
