@@ -17,6 +17,8 @@ const theme = {
 
 };
 
+export type ThemeType = typeof theme
+
 interface provider {
   children: React.ReactNode;
 }

@@ -1,7 +1,11 @@
 import { AppRoutes } from './routes/index';
+import { GlobalStyles, Theme } from './shared/themes';
 function App() {
     return (
-        <AppRoutes />
+        <Theme>
+            <GlobalStyles />
+            <AppRoutes />
+        </Theme>
     );
 }
 
