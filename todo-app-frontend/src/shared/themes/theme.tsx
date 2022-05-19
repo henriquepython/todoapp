@@ -11,6 +11,10 @@ const primary = '#2567B4';
 const secondary = '#F9B531';
 const theme = {
     fontSizes,
+    fonts: {
+        primary: 'Relaway',
+        secondry: 'Roboto',
+    },
     colors: {
         primary,
         secondary,
