@@ -12,7 +12,12 @@ export const List: React.FC<ListProps> = ({ items, selectedIndex, onClick }) => 
     return (
         <Column py="10px">
             {items.map((item, index) => (
-                <ListItem key={index} {...item} isActive={index === selectedIndex} index={index} onClick={onClick} />
+                <ListItem 
+                    key={index} {...item} 
+                    isActive={index === selectedIndex} 
+                    index={index} 
+                    onClick={onClick} 
+                />
             ))}
         </Column>
     );

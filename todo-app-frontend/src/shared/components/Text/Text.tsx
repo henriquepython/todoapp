@@ -1,5 +1,14 @@
 import styled from 'styled-components';
-import { color, ColorProps, flex, FlexProps, space, SpaceProps, typography, TypographyProps } from 'styled-system';
+import { 
+    color,
+    ColorProps,
+    flex,
+    FlexProps,
+    space,
+    SpaceProps,
+    typography,
+    TypographyProps
+} from 'styled-system';
 
 type TextProps = TypographyProps & SpaceProps & ColorProps & FlexProps;
 

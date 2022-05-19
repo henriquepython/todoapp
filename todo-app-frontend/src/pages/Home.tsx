@@ -22,11 +22,11 @@ export const Home = () => {
 
     const secondsToTime = (secs: number) => {
         const divisorMinutes = secs % 3600;
-        let minutes: any = Math.floor(divisorMinutes / 60);
+        let minutes: number | string = Math.floor(divisorMinutes / 60);
         minutes = String(minutes).padStart(2, '0');
 
         const divisorSeconds = divisorMinutes % 60;
-        let seconds: any = Math.ceil(divisorSeconds);
+        let seconds: number | string = Math.ceil(divisorSeconds);
         seconds = String(seconds).padStart(2, '0');
 
         return `${minutes}:${seconds}`;
@@ -100,8 +100,13 @@ export const Home = () => {
             return (
                 <Fragment>
                     <Button variant="primary" onClick={startTimer}>
-                        <Text fontFamily="secondary" fontSize="bodyExtraLarge" fontWeight="bold" color="primary">
-                START
+                        <Text
+                            fontFamily="secondary"
+                            fontSize="bodyExtraLarge"
+                            fontWeight="bold"
+                            color="primary"
+                        >
+                            START
                         </Text>
                     </Button>
                 </Fragment>
@@ -140,8 +145,13 @@ export const Home = () => {
             return (
                 <Fragment>
                     <Button variant="primary" onClick={startTimer}>
-                        <Text fontFamily="secondary" fontSize="bodyExtraLarge" fontWeight="bold" color="primary">
-                START
+                        <Text
+                            fontFamily="secondary"
+                            fontSize="bodyExtraLarge"
+                            fontWeight="bold"
+                            color="primary"
+                        >
+                            START
                         </Text>
                     </Button>
                 </Fragment>
@@ -179,7 +189,7 @@ export const Home = () => {
             </Column>
 
             <Text fontWeight="bold" fontSize="bodyLarge" my="10px" pl="10px">
-        Tasks
+                Tasks
             </Text>
             <Row width="100%">
                 <Input
